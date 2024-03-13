@@ -1,9 +1,13 @@
+"use client"
+
 import React from 'react'
 import Testcaseheader from './Testcaseheader'
+import { useContestContext } from './(context)/Contest'
 
-type Props = {}
+const Testcase = () => {
 
-const Testcase = (props: Props) => {
+    const {userCode, setUserCode, testCase, setTestCase, output, setOutput} = useContestContext();
+
   return (
     <div className='bg-neutral-900'>
         <Testcaseheader/>
@@ -14,7 +18,7 @@ const Testcase = (props: Props) => {
             </div>
             <div className='mt-3'>
                 <p className='text-wh-10 text-base mb-3'>Input = </p>
-                <textarea className='bg-neutral-700 w-full rounded-lg text-wh-10 text-lg items-center h-24 px-3 py-1'></textarea>
+                <textarea className='bg-neutral-700 w-full rounded-lg text-wh-10 text-lg items-center h-24 px-3 py-1' onChange={(e) => setTestCase(e.target.value)}></textarea>
             </div>
             <div className='mt-3'>
                 <p className='text-wh-10 text-base mb-3'>Output = </p>
