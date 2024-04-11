@@ -9,7 +9,7 @@ const Testcase = () => {
     const {userCode, setUserCode, testCase, setTestCase, output, setOutput} = useContestContext();
 
   return (
-    <div className='bg-neutral-900'>
+    <div className='bg-neutral-900 p-3 pb-10'>
         <Testcaseheader/>
         <div className='flex-col ml-3 mr-3'>
             <div className='flex gap-3 mt-3'>
@@ -22,7 +22,7 @@ const Testcase = () => {
             </div>
             <div className='mt-3'>
                 <p className='text-wh-10 text-base mb-3'>Output = </p>
-                <div className='bg-neutral-700 w-full rounded-lg text-wh-10 text-lg items-center h-12 px-3 py-1'>Output</div>
+                <div className='flex bg-neutral-700 w-full rounded-lg text-wh-10 text-lg items-center h-12 px-3'>{output}</div>
             </div>
         </div>
     </div>
